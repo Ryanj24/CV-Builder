@@ -1,8 +1,11 @@
 import React from 'react'
+import '../styling/CVOutput.css'
 
 const CVOutput = () => {
   return (
-    <div>CVOutput</div>
+    <div className='output'>
+
+    </div>
   )
 }
 

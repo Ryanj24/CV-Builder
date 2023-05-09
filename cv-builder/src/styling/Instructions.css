@@ -1,0 +1,8 @@
+.instructions-container {
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.instructions-container p {
+    font-size: 25px;
+}
