@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.templates {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: brown;
+}
