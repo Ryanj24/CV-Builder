@@ -4,4 +4,5 @@
     border: 2px solid;
     margin-right: 30px;
     padding: 10px;
+    overflow: scroll;
 }

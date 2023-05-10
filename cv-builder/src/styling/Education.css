@@ -1,0 +1,71 @@
+legend {
+    font-size: 20px;
+}
+
+.education-container {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.education-container > div label {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.education-container > div input {
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
+
+.education-container div:not(.study-duration-input, .btn-container) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.education-container div:not(.institution-input, .study-duration-input) {
+    margin: 25px 0;
+}
+
+.education-container  div .institution-input {
+    margin-bottom: 25px;
+}
+
+.study-duration-input {
+    display: flex;
+}
+
+.education-container .study-duration-input .start-date-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.study-duration-input .end-date-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    padding-right: 20px;
+}
+
+.btn-container button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -4px 5px 6px 2px;
+}
+
+.btn-container button:hover {
+    cursor: pointer;
+}
+
+.btn-container button:first-child {
+    margin-right: 25px;
+}
