@@ -3,7 +3,7 @@ import '../styling/EducationOutput.css'
 
 const EducationOutput = () => {
   return (
-    <div>EducationOutput</div>
+    <div></div>
   )
 }
 

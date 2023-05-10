@@ -1,0 +1,33 @@
+.personal-details-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.person-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.person-name h1 {
+    font-size: 30px;
+}
+
+.other-details {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.other-details section > p {
+    font-size: 20px;
+}
+
+.other-details .divider {
+    margin: 0 10px;
+}

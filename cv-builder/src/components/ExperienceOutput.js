@@ -3,7 +3,7 @@ import '../styling/ExperienceOutput.css'
 
 const ExperienceOutput = () => {
   return (
-    <div>ExperienceOutput</div>
+    <div></div>
   )
 }
 
