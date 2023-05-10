@@ -4,7 +4,7 @@ import PersonalDetails from './PersonalDetails'
 import Experience from './Experience'
 import Education from './Education'
 
-const CVInput = () => {
+const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEmail, phoneNumber, setPhoneNumber }) => {
 
   function handleAdd() {
     console.log('Add');
@@ -16,13 +16,23 @@ const CVInput = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log('Submitted')
+    console.log(e.target);
   }
+
 
   return (
     <div className='inputs'>
       <form onSubmit={e => handleSubmit(e)}>
-        <PersonalDetails />
+        <PersonalDetails 
+        firstName={firstName} 
+        setFirstName={setFirstName}
+        lastName={lastName} 
+        setLastName={setLastName}
+        email={email} 
+        setEmail={setEmail}
+        phoneNumber={phoneNumber} 
+        setPhoneNumber={setPhoneNumber}
+        />
         <Experience 
           handleAdd = {handleAdd}
           handleRemove = {handleRemove}
