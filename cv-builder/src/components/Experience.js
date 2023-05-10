@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styling/Experience.css'
 
-const Experience = () => {
+const Experience = ({ handleAdd, handleRemove }) => {
   return (
     <fieldset className='experience-container'>
         <legend>Professional Experience</legend>
@@ -40,8 +40,8 @@ const Experience = () => {
               <input type= 'text' id='task3' placeholder='Task Description'></input>
           </div>
           <div className='btn-container'>
-              <button type='button' id='add-btn'>Add New</button>
-              <button type='button' id='remove-btn'>Remove</button>
+              <button type='button' id='add-btn' onClick={handleAdd}>Add New</button>
+              <button type='button' id='remove-btn' onClick={handleRemove}>Remove</button>
           </div>
         </div>
 

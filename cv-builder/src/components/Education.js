@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styling/Education.css'
 
-const Education = () => {
+const Education = ({ handleAdd, handleRemove }) => {
   return (
     <fieldset className='education-container'>
         <legend>Education</legend>
@@ -29,8 +29,8 @@ const Education = () => {
             </div>
           </div>
           <div className='btn-container'>
-              <button type='button' id='add-btn'>Add New</button>
-              <button type='button' id='remove-btn'>Remove</button>
+              <button type='button' id='add-btn' onClick={handleAdd}>Add New</button>
+              <button type='button' id='remove-btn' onClick={handleRemove}>Remove</button>
           </div>
         </div>
     </fieldset>
