@@ -1,0 +1,44 @@
+legend {
+    font-size: 20px;
+}
+
+.experience-container {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.experience-container > div label {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.experience-container > div input {
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
+
+.experience-container > div:not(.job-duration-input) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.experience-container > div:not(.company-input, .job-duration-input) {
+    margin: 25px 0;
+}
+
+.job-duration-input {
+    display: flex;
+}
+
+.job-duration-input .start-date-input {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.job-duration-input .end-date-input {
+    display: flex;
+    flex-direction: column;
+}

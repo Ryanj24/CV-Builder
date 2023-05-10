@@ -1,0 +1,28 @@
+legend {
+    font-size: 20px;
+}
+
+.personal-details-container {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.personal-details-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.personal-details-container > div:not(.first-name-input, .phone-input) {
+    margin: 25px 0;
+}
+
+.personal-details-container > div > label{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.personal-details-container > div > input {
+    padding: 5px 5px;
+    font-size: 20px;
+}
