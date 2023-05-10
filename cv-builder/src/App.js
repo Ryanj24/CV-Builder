@@ -12,6 +12,8 @@ function App() {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
+  const [companies, setCompanies] = useState([{}]);
+
   return (
     <div className="App">
       <Header />
@@ -26,16 +28,14 @@ function App() {
         setEmail={setEmail}
         phoneNumber={phoneNumber} 
         setPhoneNumber={setPhoneNumber}
+        companies={companies}
+        setCompanies={setCompanies}
         />
         <CVOutput 
         firstName={firstName} 
-        setFirstName={setFirstName}
         lastName={lastName} 
-        setLastName={setLastName}
         email={email} 
-        setEmail={setEmail}
         phoneNumber={phoneNumber} 
-        setPhoneNumber={setPhoneNumber}
         />
       </div>
     </div>
