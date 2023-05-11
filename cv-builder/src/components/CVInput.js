@@ -4,7 +4,7 @@ import PersonalDetails from './PersonalDetails'
 import Experience from './Experience'
 import Education from './Education'
 
-const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEmail, phoneNumber, setPhoneNumber, companies, setCompanies }) => {
+const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEmail, phoneNumber, setPhoneNumber, companies, setCompanies, company, setCompany }) => {
 
   function handleAdd() {
     console.log('Add');
@@ -36,6 +36,8 @@ const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEma
         <Experience 
           companies={companies}
           setCompanies={setCompanies}
+          company={company}
+          setCompany={setCompany}
           handleAdd = {handleAdd}
           handleRemove = {handleRemove}
         />
