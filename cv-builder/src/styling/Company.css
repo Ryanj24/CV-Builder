@@ -1,0 +1,33 @@
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 18px;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+}
+
+
+.name-duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+.job-title {
+    padding: 0 10px;
+    font-style: italic;
+}
+
+.key-points {
+    margin-top: 5px;
+    padding-left: 40px;
+} 
