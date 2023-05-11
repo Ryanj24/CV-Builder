@@ -3,7 +3,8 @@ import '../styling/Experience.css'
 
 const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew, handleRemove }) => {
 
-  const [tasks, setTasks] = useState('');
+  const [singleTask, setSingleTask] = useState('')
+  const [tasks, setTasks] = useState([]);
 
   function handleChange(e) {
 
@@ -17,15 +18,22 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
         setCompany({...company, start: e.target.value})
     } else if (e.target.name === 'end') {
         setCompany({...company, end: e.target.value})
-    } else if (e.target.name === 'task') {
-        setTasks(tasks => ([...tasks, e.target.value]));
-        setCompany(company => ({...company, tasks: tasks}))
+    } else if (e.target.name === 'task1') {
+        setSingleTask(e.target.value)
+    } else if (e.target.name === 'task2') {
+        setSingleTask(prev => e.target.value)
+    } else if (e.target.name === 'task3') {
+        setSingleTask(prev => e.target.value)   
     }
   }
 
-  function logCompany(e) {
-    setCompanies([...companies, company]);
-    console.log(companies);
+  function addTask(e) {
+    setTasks(prev => [...prev, singleTask])
+  }
+
+  function AddCompany(e) {
+    setCompany({...company, tasks: tasks})
+    setCompanies(prev => [...prev, company]);
   }
 
   return (
@@ -56,17 +64,33 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
           </div>
           <div className='tasks-input'>
               <label>Main Tasks of Role</label>
-              <label htmlFor='task1'>Task 1</label>
-              <input type= 'text' name='task' placeholder='Task Description' onChange={handleChange}></input>
+              <div className='task'>
+                  <label htmlFor='task1'>Task 1</label>
+                  <div className='input-btn-group'>
+                  <input type= 'text' name='task1' placeholder='Task Description' onChange={handleChange}></input>
+                  <button type='button' onClick={addTask}>Enter</button>
+                  </div>
+              </div>
 
-              <label htmlFor='task2'>Task 2</label>
-              <input type= 'text' name='task' placeholder='Task Description' onChange={handleChange}></input>
+              <div className='task'>
+                  <label htmlFor='task2'>Task 2</label>
+                  <div className='input-btn-group'>
+                  <input type= 'text' name='task2' placeholder='Task Description' onChange={handleChange}></input>
+                  <button type='button' onClick={addTask}>Enter</button>
+                  </div>
+              </div>
 
-              <label htmlFor='task3'>Task 3</label>
-              <input type= 'text' name='task' placeholder='Task Description' onChange={handleChange}></input>
+              <div className='task'>
+                  <label htmlFor='task3'>Task 3</label>
+                  <div className='input-btn-group'>
+                  <input type= 'text' name='task3' placeholder='Task Description' onChange={handleChange}></input>
+                  <button type='button' onClick={addTask}>Enter</button>
+                  </div>
+              </div>
+
           </div>
           <div className='btn-container'>
-              <button type='button' name='enter-btn' onClick={logCompany}>Enter</button>
+              <button type='button' name='enter-btn' onClick={AddCompany}>Enter</button>
               <button type='button' name='add-btn' onClick={handleAddNew}>Add New</button>
               <button type='button' name='remove-btn' onClick={handleRemove}>Remove</button>
           </div>

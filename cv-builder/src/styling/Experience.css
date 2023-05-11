@@ -18,13 +18,13 @@ legend {
 }
 
 
-.experience-container div:not(.job-duration-input, .btn-container) {
+.experience-container div:not(.job-duration-input, .btn-container, .tasks-input, .task, .input-btn-group) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.experience-container div:not(.company-input, .job-duration-input) {
+.experience-container div:not(.company-input, .job-duration-input, .input-btn-group) {
     margin: 25px 0;
 }
 
@@ -47,13 +47,24 @@ legend {
     display: flex;
     flex-direction: column;
 }
-
-.tasks-input label:first-child {
-    margin-bottom: 20px;
+.task label {
+    margin-bottom: 5px;
 }
 
-.tasks-input input:not(#task3) {
-    margin-bottom: 20px;
+.task > div {
+    display: flex;
+    margin-top: 10px;
+}
+
+.task > div > input {
+    margin-right: 5px;
+}
+
+.task > div > button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .btn-container {
