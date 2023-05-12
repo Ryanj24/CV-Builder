@@ -3,8 +3,9 @@ import '../styling/Experience.css'
 
 const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew, handleRemove }) => {
 
+  /*
   const [singleTask, setSingleTask] = useState('')
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);*/
 
 
   function handleChange(e) {
@@ -23,9 +24,10 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
     })
   }
 
+  /*
   function addTask(e) {
     setTasks(prev => [...prev, singleTask])
-  }
+  }*/
 
   function AddCompany(e) {
     setCompanies([...companies, company]);
@@ -64,7 +66,7 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
                   <label htmlFor='task1'>Task 1</label>
                   <div className='input-btn-group'>
                   <input type= 'text' name='task1' placeholder='Task Description' onChange={handleChange}></input>
-                  <button type='button' onClick={addTask}>Enter</button>
+                  <button type='button'>Enter</button>
                   </div>
               </div>
 
@@ -72,7 +74,7 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
                   <label htmlFor='task2'>Task 2</label>
                   <div className='input-btn-group'>
                   <input type= 'text' name='task2' placeholder='Task Description' onChange={handleChange}></input>
-                  <button type='button' onClick={addTask}>Enter</button>
+                  <button type='button'>Enter</button>
                   </div>
               </div>
 
@@ -80,7 +82,7 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
                   <label htmlFor='task3'>Task 3</label>
                   <div className='input-btn-group'>
                   <input type= 'text' name='task3' placeholder='Task Description' onChange={handleChange}></input>
-                  <button type='button' onClick={addTask}>Enter</button>
+                  <button type='button'>Enter</button>
                   </div>
               </div>
 

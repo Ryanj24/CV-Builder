@@ -48,6 +48,7 @@ function App() {
         lastName={lastName} 
         email={email} 
         phoneNumber={phoneNumber} 
+        companies={companies}
         />
       </div>
     </div>
