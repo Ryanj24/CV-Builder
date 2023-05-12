@@ -6,14 +6,6 @@ import Education from './Education'
 
 const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEmail, phoneNumber, setPhoneNumber, companies, setCompanies, company, setCompany }) => {
 
-  function handleAdd() {
-    console.log('Add');
-  }
-
-  function handleRemove() {
-    console.log('Remove');
-  }
-
   function handleSubmit(e) {
     e.preventDefault()
     console.log(e.target);
@@ -22,7 +14,7 @@ const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEma
 
   return (
     <div className='inputs'>
-      <form onSubmit={e => handleSubmit(e)}>
+      <form onSubmit={e => handleSubmit(e)} id='myForm'>
         <PersonalDetails 
         firstName={firstName} 
         setFirstName={setFirstName}
@@ -38,12 +30,8 @@ const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEma
           setCompanies={setCompanies}
           company={company}
           setCompany={setCompany}
-          handleAdd = {handleAdd}
-          handleRemove = {handleRemove}
         />
         <Education 
-          handleAdd = {handleAdd}
-          handleRemove = {handleRemove}
         />
         <div className='submit-btn-container'>
             <button type='submit'>Generate CV</button>

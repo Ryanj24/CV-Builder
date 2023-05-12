@@ -1,49 +1,8 @@
-import React, { useState } from 'react'
-import '../styling/Experience.css'
-import uniqid from 'uniqid'
-import NewCompany from './NewCompany'
+import React from 'react'
 
-const Experience = ({ company, setCompany, companies, setCompanies }) => {
-
-  /*
-  const [singleTask, setSingleTask] = useState('')
-  const [tasks, setTasks] = useState([]);
-
-  function addTask(e) {
-    setTasks(prev => [...prev, singleTask])
-  }*/
-
-  function handleChange(e) {
-
-    const {name, value} = e.target;
-    const id = uniqid();
-
-
-    setCompany((prevState) => {
-      if (name.includes('task')) {
-        let index = Number(name.at(-1)) - 1
-        let newTasks = [...company.tasks]
-        newTasks[index] = value 
-        return {...prevState, tasks: newTasks}
-      }
-      return {...prevState, [name]: value}
-    })
-
-    setCompany(prevState => ({...prevState, id: id}))
-  }
-
-
-  function handleEnterCompany(e) {
-    
-    setCompanies([...companies, company]);
-  }
-
-
-
+const NewCompany = ({ company, setCompany, companies, setCompanies, handleChange, handleEnterCompany }) => {
   return (
-    <fieldset className='experience-container'>
-        <legend>Professional Experience</legend>
-        <div className='company-container'>
+    <div className='company-container'>
           <div className='company-input'>
               <label htmlFor='company'>Company Name</label>
               <input type= 'text' placeholder='Company Name' name='name' onChange={handleChange}></input>
@@ -99,8 +58,7 @@ const Experience = ({ company, setCompany, companies, setCompanies }) => {
               <button type='button' name='remove-btn' >Remove</button>
           </div>
         </div>
-    </fieldset>
   )
 }
 
-export default Experience
+export default NewCompany

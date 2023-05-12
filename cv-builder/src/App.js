@@ -14,7 +14,7 @@ function App() {
   const [phoneNumber, setPhoneNumber] = useState('');
 
   const [company, setCompany] = useState({
-    id: uniqid(),
+    id: '',
     name: '',
     position: '',
     location: '',
