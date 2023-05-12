@@ -6,25 +6,21 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
   const [singleTask, setSingleTask] = useState('')
   const [tasks, setTasks] = useState([]);
 
+
   function handleChange(e) {
 
-    if (e.target.name === 'company') {
-        setCompany({...company, name: e.target.value})
-    } else if (e.target.name === 'position') {
-        setCompany({...company, position: e.target.value})
-    } else if (e.target.name === 'location') {
-        setCompany({...company, location: e.target.value})
-    } else if (e.target.name === 'start') {
-        setCompany({...company, start: e.target.value})
-    } else if (e.target.name === 'end') {
-        setCompany({...company, end: e.target.value})
-    } else if (e.target.name === 'task1') {
-        setSingleTask(e.target.value)
-    } else if (e.target.name === 'task2') {
-        setSingleTask(prev => e.target.value)
-    } else if (e.target.name === 'task3') {
-        setSingleTask(prev => e.target.value)   
-    }
+    const {name, value} = e.target;
+
+
+    setCompany((prevState) => {
+      if (name.includes('task')) {
+        let index = Number(name.at(-1)) - 1
+        let newTasks = [...company.tasks]
+        newTasks[index] = value 
+        return {...prevState, tasks: newTasks}
+      }
+      return {...prevState, [name]: value}
+    })
   }
 
   function addTask(e) {
@@ -32,9 +28,9 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
   }
 
   function AddCompany(e) {
-    setCompany({...company, tasks: tasks})
-    setCompanies(prev => [...prev, company]);
+    setCompanies([...companies, company]);
   }
+
 
   return (
     <fieldset className='experience-container'>
@@ -42,7 +38,7 @@ const Experience = ({ company, setCompany, companies, setCompanies, handleAddNew
         <div className='company-container'>
           <div className='company-input'>
               <label htmlFor='company'>Company Name</label>
-              <input type= 'text' placeholder='Company Name' name='company' onChange={handleChange}></input>
+              <input type= 'text' placeholder='Company Name' name='name' onChange={handleChange}></input>
           </div>
           <div className='position-input'>
               <label htmlFor='position'>Position</label>

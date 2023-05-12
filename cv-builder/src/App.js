@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Instructions from "./components/Instructions";
 import './index.css'
 import { useState } from "react";
+import uniqid from 'uniqid'
 
 function App() {
 
@@ -12,7 +13,15 @@ function App() {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
-  const [company, setCompany] = useState({})
+  const [company, setCompany] = useState({
+    id: uniqid(),
+    name: '',
+    position: '',
+    location: '',
+    start: '',
+    end: '',
+    tasks: []
+  })
   const [companies, setCompanies] = useState([]);
 
   return (
