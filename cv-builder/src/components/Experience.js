@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styling/Experience.css'
 import uniqid from 'uniqid'
-import NewCompany from './NewCompany'
+import { useRef } from 'react'
+
 
 const Experience = ({ company, setCompany, companies, setCompanies }) => {
 
-  /*
-  const [singleTask, setSingleTask] = useState('')
-  const [tasks, setTasks] = useState([]);
 
-  function addTask(e) {
-    setTasks(prev => [...prev, singleTask])
-  }*/
 
   function handleChange(e) {
 
@@ -34,16 +29,41 @@ const Experience = ({ company, setCompany, companies, setCompanies }) => {
 
 
   function handleEnterCompany(e) {
-    
+    document.querySelectorAll('input').forEach(input => input.value = '')
     setCompanies([...companies, company]);
+    setCompany({
+      id: '',
+      name: '',
+      position: '',
+      location: '',
+      start: '',
+      end: '',
+      tasks: []
+    })
+    document.querySelector('.experience-container').scrollIntoView({behavior:'smooth'})
   }
 
+  function handleClearInputs() {
+    document.querySelectorAll('input').forEach(input => input.value = '')
+    setCompany({
+      id: '',
+      name: '',
+      position: '',
+      location: '',
+      start: '',
+      end: '',
+      tasks: []
+    })
+  }
 
 
   return (
     <fieldset className='experience-container'>
         <legend>Professional Experience</legend>
+        <p id='experience-instructions'>Enter the details below of each company you have worked for one at a time and hit the enter button at the bottom of the section to add the company to the CV on the right. For the main tasks section, you are not obliged to fill all 5 fields
+        </p>
         <div className='company-container'>
+          
           <div className='company-input'>
               <label htmlFor='company'>Company Name</label>
               <input type= 'text' placeholder='Company Name' name='name' onChange={handleChange}></input>
@@ -72,7 +92,6 @@ const Experience = ({ company, setCompany, companies, setCompanies }) => {
                   <label htmlFor='task1'>Task 1</label>
                   <div className='input-btn-group'>
                   <input type= 'text' name='task1' placeholder='Task Description' onChange={handleChange}></input>
-                  <button type='button'>Enter</button>
                   </div>
               </div>
 
@@ -80,7 +99,6 @@ const Experience = ({ company, setCompany, companies, setCompanies }) => {
                   <label htmlFor='task2'>Task 2</label>
                   <div className='input-btn-group'>
                   <input type= 'text' name='task2' placeholder='Task Description' onChange={handleChange}></input>
-                  <button type='button'>Enter</button>
                   </div>
               </div>
 
@@ -88,16 +106,27 @@ const Experience = ({ company, setCompany, companies, setCompanies }) => {
                   <label htmlFor='task3'>Task 3</label>
                   <div className='input-btn-group'>
                   <input type= 'text' name='task3' placeholder='Task Description' onChange={handleChange}></input>
-                  <button type='button'>Enter</button>
                   </div>
               </div>
 
+              <div className='task'>
+                  <label htmlFor='task1'>Task 4</label>
+                  <div className='input-btn-group'>
+                  <input type= 'text' name='task4' placeholder='Task Description' onChange={handleChange}></input>
+                  </div>
+              </div>
+
+              <div className='task'>
+                  <label htmlFor='task1'>Task 5</label>
+                  <div className='input-btn-group'>
+                  <input type= 'text' name='task5' placeholder='Task Description' onChange={handleChange}></input>
+                  </div>
+              </div>
           </div>
-          <div className='btn-container'>
-              <button type='button' name='enter-btn' onClick={handleEnterCompany}>Enter Company</button>
-              <button type='button' name='add-btn'>Add New Company</button>
-              <button type='button' name='remove-btn' >Remove</button>
-          </div>
+        </div>
+        <div className='btn-container'>
+              <button type='button' name='enter-btn' onClick={() => handleEnterCompany()}>Enter Company</button>
+              <button type='button' name='remove-btn' onClick={handleClearInputs}>Clear Fields</button>
         </div>
     </fieldset>
   )
