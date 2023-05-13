@@ -4,7 +4,7 @@ import PersonalDetails from './PersonalDetails'
 import Experience from './Experience'
 import Education from './Education'
 
-const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEmail, phoneNumber, setPhoneNumber, companies, setCompanies, company, setCompany }) => {
+const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEmail, phoneNumber, setPhoneNumber, companies, setCompanies, company, setCompany, school, setSchool, schools, setSchools }) => {
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -32,6 +32,10 @@ const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEma
           setCompany={setCompany}
         />
         <Education 
+          schools={schools}
+          setSchools={setSchools}
+          school={school}
+          setSchool={setSchool}
         />
         <div className='submit-btn-container'>
             <button type='submit'>Generate CV</button>

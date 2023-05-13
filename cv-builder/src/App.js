@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Instructions from "./components/Instructions";
 import './index.css'
 import { useState } from "react";
-import uniqid from 'uniqid'
 
 function App() {
 
@@ -24,6 +23,18 @@ function App() {
   })
   const [companies, setCompanies] = useState([]);
 
+  const [school, setSchool] = useState({
+    id: '',
+    name: '',
+    studyTitle: '',
+    location: '',
+    start: '',
+    end: '',
+    achievements: []
+  })
+
+  const [schools, setSchools] = useState([]);
+
   return (
     <div className="App">
       <Header />
@@ -42,6 +53,10 @@ function App() {
         setCompanies={setCompanies}
         company={company}
         setCompany={setCompany}
+        schools={schools}
+        setSchools={setSchools}
+        school={school}
+        setSchool={setSchool}
         />
         <CVOutput 
         firstName={firstName} 
@@ -49,6 +64,7 @@ function App() {
         email={email} 
         phoneNumber={phoneNumber} 
         companies={companies}
+        schools={schools}
         />
       </div>
     </div>

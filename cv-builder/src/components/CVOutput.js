@@ -4,13 +4,8 @@ import PersonalDetailsOutput from './PersonalDetailsOutput'
 import ExperienceOutput from './ExperienceOutput'
 import EducationOutput from './EducationOutput'
 
-const CVOutput = ({firstName, lastName, email, phoneNumber, companies}) => {
+const CVOutput = ({firstName, lastName, email, phoneNumber, companies, schools }) => {
 
-  /* {firstName}
-      {lastName}
-      {email}
-      {phoneNumber}
-      */
   return (
     <div className='output'>
       <PersonalDetailsOutput 
@@ -21,7 +16,8 @@ const CVOutput = ({firstName, lastName, email, phoneNumber, companies}) => {
       />
       <ExperienceOutput 
       companies={companies}/>
-      <EducationOutput />
+      <EducationOutput 
+      schools={schools}/>
     </div>
   )
 }

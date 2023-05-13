@@ -3,7 +3,6 @@ import '../styling/ExperienceOutput.css'
 import Company from './Company'
 
 const ExperienceOutput = ({ companies }) => {
-
   return (
     <section className='experience-output'>
         <h1>Professional Experience</h1>

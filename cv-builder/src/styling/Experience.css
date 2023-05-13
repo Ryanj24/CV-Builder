@@ -18,13 +18,13 @@ legend {
 }
 
 
-.experience-container div:not(.job-duration-input, .btn-container, .tasks-input, .task, .input-btn-group) {
+.experience-container div:not(.btn-container, .tasks-input, .task, .input-btn-group, .date-inputs) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.experience-container div:not(.company-input, .job-duration-input, .input-btn-group) {
+.experience-container div:not(.company-input, .input-btn-group, .date-inputs) {
     margin: 25px 0;
 }
 
@@ -32,12 +32,27 @@ legend {
     margin-bottom: 25px;
 }
 
-.experience-container #experience-instructions {
+.experience-container .experience-instructions {
     display: block;
     padding: 5px;
     background-color: rgb(236, 236, 236);
     border-radius: 10px;
+    margin: 20px 0;
 }
+
+.experience-container .experience-instructions:last-of-type {
+    margin-top: 10px;
+}
+
+.experience-container .job-duration-input {
+    justify-content: center;
+}
+
+
+.experience-container .job-duration-input .date-inputs {
+    display: flex;
+}
+
 
 .job-duration-input {
     display: flex;
@@ -54,6 +69,8 @@ legend {
     display: flex;
     flex-direction: column;
 }
+
+
 .task label {
     margin-bottom: 5px;
 }

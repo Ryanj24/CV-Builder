@@ -18,13 +18,13 @@ legend {
 }
 
 
-.education-container div:not(.study-duration-input, .btn-container) {
+.education-container div:not(.study-duration-input, .btn-container, .date-inputs) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.education-container div:not(.institution-input, .study-duration-input) {
+.education-container div:not(.institution-input, .date-inputs, .item) {
     margin: 25px 0;
 }
 
@@ -32,8 +32,18 @@ legend {
     margin-bottom: 25px;
 }
 
+
+.education-container .education-instructions {
+    display: block;
+    padding: 5px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
 .study-duration-input {
     display: flex;
+    flex-direction: column;
 }
 
 .education-container .study-duration-input .start-date-input {
@@ -45,6 +55,18 @@ legend {
 .study-duration-input .end-date-input {
     display: flex;
     flex-direction: column;
+}
+
+.date-inputs {
+    display: flex;
+}
+
+.achievements-input .item > div:nth-child(2) {
+    margin: 30px 0;
+}
+
+.achievements-input .item label {
+    margin-bottom: 5px;
 }
 
 .btn-container {

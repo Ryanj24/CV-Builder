@@ -1,25 +1,25 @@
 import React from 'react'
 import '../styling/Institution.css'
+import format from 'date-fns/format'
 
-const Institution = () => {
+const Institution = ({ id, name, studyTitle, location, start, end, achievements }) => {
   return (
     <section className='institution'>
         <section className='name-duration'>
           <div className='institution-name'>
-              <h2>University of Glasgow</h2>
+              <h2>{name}</h2>
           </div>
           <div className='duration-of-study'>
-              <p>2016-2020</p>
+          <p>{end === '' ? format(new Date(start), 'yyyy') + ' - Present' : format(new Date(start), 'yyyy') + ' - ' + format(new Date(end), 'yyyy')}</p>
           </div>
         </section>
         <section className='study-title'>
-            <p>Bsc (Hons) Statistics</p>
+            <p>{studyTitle}</p>
         </section>
         <section className='key-points'>
             <ul>
-              <li>Graduated from Honors Program, Rank 1</li>
-              <li>Recipient of Dean's List Academic Achievement Award</li>
-              <li>Dean's List, GPA 3.89</li>
+            {achievements.map(item => 
+              <li key={achievements.indexOf(item)}>{item}</li>)}
             </ul>
         </section>
       </section>
