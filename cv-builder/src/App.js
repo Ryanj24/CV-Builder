@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Instructions from "./components/Instructions";
 import './index.css'
 import { useState } from "react";
+import PDFFile from "./components/PDFFile";
+import { PDFDownloadLink} from "@react-pdf/renderer";
 
 function App() {
 
@@ -66,6 +68,11 @@ function App() {
         companies={companies}
         schools={schools}
         />
+      </div>
+      <div className='submit-btn-container'>
+      <PDFDownloadLink document={<PDFFile />} fileName='testCV'>
+        {({loading}) => (loading ? <button>Generate PDF</button>:<button>Generate PDF</button>)}
+      </PDFDownloadLink>
       </div>
     </div>
   );

@@ -11,6 +11,10 @@ const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEma
     console.log(e.target);
   }
 
+  /*
+        <div className='submit-btn-container'>
+            <button type='submit'>Generate CV</button>
+        </div>*/
 
   return (
     <div className='inputs'>
@@ -37,9 +41,6 @@ const CVInput = ({ firstName, setFirstName, lastName, setLastName, email, setEma
           school={school}
           setSchool={setSchool}
         />
-        <div className='submit-btn-container'>
-            <button type='submit'>Generate CV</button>
-        </div>
       </form>
     </div>
   )

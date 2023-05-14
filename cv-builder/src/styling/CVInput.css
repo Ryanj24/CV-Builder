@@ -6,21 +6,3 @@
     padding: 10px;
     overflow: scroll;
 }
-
-.submit-btn-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.submit-btn-container button {
-    padding: 10px 30px;
-    font-size: 25px;
-    border: none;
-    border-radius: 15px;
-}
-
-.submit-btn-container button:hover {
-    cursor: pointer;
-}
