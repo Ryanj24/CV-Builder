@@ -7,14 +7,19 @@ const Company = ({ name, position, location, start, end, tasks}) => {
     <section className='company'>
       <section className='name-duration'>
         <div className='company-name'>
-            <h2>{name}</h2>
+            <h3>{name}</h3>
         </div>
         <div className='duration-of-job'>
             <p>{end === '' ? format(new Date(start), 'LLLL yyyy') + ' - Present' : format(new Date(start), 'LLLL yyyy') + ' - ' + format(new Date(end), 'LLLL yyyy')}</p>
         </div>
       </section>
-      <section className='job-title'>
-        <p>{position}</p>
+      <section className='job-title-location'>
+        <div className='job-title'>
+          <p>{position}</p>
+        </div>
+        <div className='job-location'>
+          <p>{location}</p>
+        </div>
       </section>
       <section className='key-points'>
           <ul>

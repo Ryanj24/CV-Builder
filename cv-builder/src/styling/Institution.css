@@ -1,9 +1,9 @@
 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 li {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .institution {
@@ -21,10 +21,18 @@ li {
     padding: 0 10px;
 }
 
+.study-title-location {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
 
 .study-title {
-    padding: 0 10px;
     font-style: italic;
+}
+
+.study-title p {
+    font-size: 20px;
 }
 
 .key-points {
