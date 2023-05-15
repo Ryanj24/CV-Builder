@@ -4,7 +4,7 @@ import PersonalDetailsOutput from './PersonalDetailsOutput'
 import ExperienceOutput from './ExperienceOutput'
 import EducationOutput from './EducationOutput'
 
-const CVOutput = ({firstName, lastName, email, phoneNumber, companies, schools }) => {
+const CVOutput = ({firstName, lastName, email, phoneNumber, companies, schools}) => {
 
   return (
     <div className='output'>
@@ -21,5 +21,6 @@ const CVOutput = ({firstName, lastName, email, phoneNumber, companies, schools }
     </div>
   )
 }
+
 
 export default CVOutput
