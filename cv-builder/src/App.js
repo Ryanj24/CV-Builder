@@ -40,26 +40,6 @@ function App() {
 
   const [schools, setSchools] = useState([]);
 
-  function exportPDF() {
-    const content = document.querySelector('.output')
-
-    //html2pdf(content);
-
-    /*
-    html2canvas(content, {options: { dpi: 300, letterRendering: true, width: 1080, height: 1920}}).then(canvas => {
-      const imgData = canvas.toDataURL('image/png')
-
-      const doc = new jsPDF({
-        orientation: 'p',
-        unit: 'pt', 
-        format: [canvas.width, canvas.height] 
-  });
-
-      doc.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
-      doc.save('testCV');
-    })*/
-  }
-
   return (
     <div className="App">
       <Header />
