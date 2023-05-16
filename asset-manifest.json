@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%7Bcv-builder%7D/static/css/main.445238de.css",
+    "main.js": "/%7Bcv-builder%7D/static/js/main.55db0990.js",
+    "index.html": "/%7Bcv-builder%7D/index.html",
+    "main.445238de.css.map": "/%7Bcv-builder%7D/static/css/main.445238de.css.map",
+    "main.55db0990.js.map": "/%7Bcv-builder%7D/static/js/main.55db0990.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.445238de.css",
+    "static/js/main.55db0990.js"
+  ]
+}
