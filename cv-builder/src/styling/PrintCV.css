@@ -1,13 +1,8 @@
 .print-container {
-    height: 100vh;
-    width: 100%;
+    margin: 0;
+    padding: 20px;
 }
-/*
-@media print {
-    .exp {
-        page-break-after: ;
-    }
+
+@page {
+    margin: 10px;
   }
-  
-  pageStyle='.exp { break-after: auto; }'
-  */

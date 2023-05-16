@@ -104,7 +104,6 @@ function App() {
       </div>
       <div className='submit-btn-container'>
         <ReactToPrint 
-          pageStyle='.exp { break-after: auto; }'
           trigger={() => <button>Save as PDF</button>}
           content={() => componentRef.current}
         />
